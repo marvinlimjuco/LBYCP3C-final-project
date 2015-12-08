@@ -1,0 +1,168 @@
+<template name="survey">
+    <div class="row">
+        <div class="col-sm-8 col-sm-offset-2">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <h5>Timer: {{timer}}</h5>
+                    <img src="{{currentItem.image.url}}" class="img-responsive center-block"
+                         alt="{{currentItem.image.name}}" style="border:1px solid #337ab7">
+                    <br/>
+
+                    <form id="respondentForm" name="respondentForm" method="POST">
+                        <div class="form-group">
+                            <div class="table-responsive">
+                                <input type="hidden" name="itemId" value="{{currentItem.itemId}}"/>
+                                <table class="table table-condensed table-striped table-bordered table-center">
+                                    <thead>
+                                    <tr>
+                                        <th class="col-sm-7">&nbsp;</th>
+                                        <th class="col-sm-1">1</th>
+                                        <th class="col-sm-1">2</th>
+                                        <th class="col-sm-1">3</th>
+                                        <th class="col-sm-1">4</th>
+                                        <th class="col-sm-1">5</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <th>Vividness</th>
+                                        <td>
+                                            <div class="radio">
+                                                <label>
+                                                    <input type="radio" name="vividness" id="vividness1"
+                                                           value="1">
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="radio">
+                                                <label>
+                                                    <input type="radio" name="vividness" id="vividness2"
+                                                           value="2">
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="radio">
+                                                <label>
+                                                    <input type="radio" name="vividness" id="vividness3"
+                                                           value="3">
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="radio">
+                                                <label>
+                                                    <input type="radio" name="vividness" id="vividness4"
+                                                           value="4">
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="radio">
+                                                <label>
+                                                    <input type="radio" name="vividness" id="vividness5"
+                                                           value="5">
+                                                </label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>Detail Content</th>
+                                        <td>
+                                            <div class="radio">
+                                                <label>
+                                                    <input type="radio" name="detail" id="detail1"
+                                                           value="1">
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="radio">
+                                                <label>
+                                                    <input type="radio" name="detail" id="detail2"
+                                                           value="2">
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="radio">
+                                                <label>
+                                                    <input type="radio" name="detail" id="detail3"
+                                                           value="3">
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="radio">
+                                                <label>
+                                                    <input type="radio" name="detail" id="detail4"
+                                                           value="4">
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="radio">
+                                                <label>
+                                                    <input type="radio" name="detail" id="detail5"
+                                                           value="5">
+                                                </label>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <th>Visual Appeal</th>
+                                        <td>
+                                            <div class="radio">
+                                                <label>
+                                                    <input type="radio" name="appeal" id="appeal1"
+                                                           value="1">
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="radio">
+                                                <label>
+                                                    <input type="radio" name="appeal" id="appeal2"
+                                                           value="2">
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="radio">
+                                                <label>
+                                                    <input type="radio" name="appeal" id="appeal3"
+                                                           value="3">
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="radio">
+                                                <label>
+                                                    <input type="radio" name="appeal" id="appeal4"
+                                                           value="4">
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="radio">
+                                                <label>
+                                                    <input type="radio" name="appeal" id="appeal5"
+                                                           value="5">
+                                                </label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+
+                                </table>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary btn-block">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

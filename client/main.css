@@ -1,0 +1,29 @@
+/* CSS declarations go here */
+.navbar, .btn, .form-control, .panel, .panel-heading{
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+
+.table-center > td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.table-center > td > button > i {
+    font-size: 2em;
+}
+
+.thumb {
+    width: 100px;
+    height: 100px;
+}
+
+.blackout {
+    opacity: 0 !important;
+    background-color: black !important;
+}
+
+.perImage{
+    max-height:500px !important;
+}

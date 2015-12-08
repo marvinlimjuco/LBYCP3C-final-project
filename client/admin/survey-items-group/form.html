@@ -1,0 +1,22 @@
+<template name="itemGroupForm">
+    <h3 class="text-info">Add Survey Item Group</h3>
+    <br/>
+    {{#if errorMsg}}
+        <div class="alert alert-danger" role="alert">{{errorMsg}}</div>
+    {{/if}}
+    <form id="addSurveyItemGroup" method="POST" class="form-horizontal">
+        <div class="form-group">
+            <label for="groupName" class="col-sm-3 control-label">Group Name</label>
+
+            <div class="col-sm-9">
+                <input type="text" name="groupName" id="groupName" class="form-control" required/>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <button class="btn btn-primary col-md-3 col-md-offset-9">Add Item Group</button>
+            </div>
+        </div>
+    </form>
+</template>

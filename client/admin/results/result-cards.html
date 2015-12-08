@@ -1,0 +1,26 @@
+<template name="resultCard">
+    <div class="col-xs-6 col-sm-4 col md-3">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title"><a href="/results/{{_id}}">{{groupName}}</a></h3>
+            </div>
+            <div class="panel-body">
+                <div class="table-responsive">
+                    <table class="table table-hover table-condensed">
+                        <caption>Summary</caption>
+                        <tbody>
+                        <tr>
+                            <th class="col-sm-6">Average Rating:</th>
+                            <td class="col-sm-6">{{summary.average}}</td>
+                        </tr>
+                        <tr>
+                            <th class="col-sm-6">Respondents:</th>
+                            <td class="col-sm-6">{{summary.respondents}}</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

@@ -1,0 +1,32 @@
+<template name="itemGroupTable">
+    <h3 class="text-info">Group List: {{surveyItemGroupsCount}}</h3>
+    {{> Paginator_UI surveyItemGroups}}
+    <br/>
+
+    <div class="table-responsive">
+        <table class="table table-condensed table-bordered table-striped table-center">
+            <thead>
+            <tr>
+                <th class="col-md-8">Item Group</th>
+                <th class="col-md-4">&nbsp;</th>
+            </tr>
+            </thead>
+            <tbody>
+            {{#each surveyItemGroups}}
+                <tr class="survey-items">
+                    <td class="col-md-5 survey-items-text">
+                        {{groupName}}
+                    </td>
+                    <td class="col-md-2 survey-items-text">
+                        <button class="btn btn-link deleteItem" data-id="{{_id}}"><i class="fa fa-times"></i></button>
+                    </td>
+                </tr>
+            {{/each}}
+
+            </tbody>
+        </table>
+    </div>
+    <br/>
+    {{> Paginator_UI surveyItemGroups}}
+    <br/>
+</template>

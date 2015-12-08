@@ -1,0 +1,209 @@
+<template name="individualResults">
+    <div class="row">
+        <div class="col-sm-8 col-sm-offset-2">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <h2 class="text-info center-block text-center">{{groupName}}</h2>
+                    <hr/>
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-hover table-striped table-condensed">
+                            <caption>Overall Rating:</caption>
+                            <tbody>
+                            <tr>
+                                <th class="col-sm-6">Total Average:</th>
+                                <td class="col-sm-6">{{fullDetails.average}}</td>
+                            </tr>
+                            <tr>
+                                <th class="col-sm-6">Total Respondent:</th>
+                                <td class="col-sm-6">{{fullDetails.respondents}}</td>
+                            </tr>
+                            <tr>
+                                <th class="col-sm-6">Vividness:</th>
+                                <td class="col-sm-6">{{fullDetails.vividness}}</td>
+                            </tr>
+                            <tr>
+                                <th class="col-sm-6">Content Detail:</th>
+                                <td class="col-sm-6">{{fullDetails.detail}}</td>
+                            </tr>
+                            <tr>
+                                <th class="col-sm-6">Visual Appeal:</th>
+                                <td class="col-sm-6">{{fullDetails.appeal}}</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <br/>
+
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-hover table-striped table-condensed">
+                            <caption>Number of respondents answered per category:</caption>
+                            <thead>
+                            <tr>
+                                <th class="col-sm-2">Category</th>
+                                <th class="col-sm-2">Very Good</th>
+                                <th class="col-sm-2">Good</th>
+                                <th class="col-sm-2">Neutral</th>
+                                <th class="col-sm-2">Bad</th>
+                                <th class="col-sm-2">Very Bad</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <th class="col-sm-2">Vividness:</th>
+                                <td class="col-sm-2">{{fullDetails.vividnessCount.$5}}</td>
+                                <td class="col-sm-2">{{fullDetails.vividnessCount.$4}}</td>
+                                <td class="col-sm-2">{{fullDetails.vividnessCount.$3}}</td>
+                                <td class="col-sm-2">{{fullDetails.vividnessCount.$2}}</td>
+                                <td class="col-sm-2">{{fullDetails.vividnessCount.$1}}</td>
+                            </tr>
+                            <tr>
+                                <th class="col-sm-2">Content Detail:</th>
+                                <td class="col-sm-2">{{fullDetails.detailCount.$5}}</td>
+                                <td class="col-sm-2">{{fullDetails.detailCount.$4}}</td>
+                                <td class="col-sm-2">{{fullDetails.detailCount.$3}}</td>
+                                <td class="col-sm-2">{{fullDetails.detailCount.$2}}</td>
+                                <td class="col-sm-2">{{fullDetails.detailCount.$1}}</td>
+                            </tr>
+                            <tr>
+                                <th class="col-sm-2">Visual Appeal:</th>
+                                <td class="col-sm-2">{{fullDetails.appealCount.$5}}</td>
+                                <td class="col-sm-2">{{fullDetails.appealCount.$4}}</td>
+                                <td class="col-sm-2">{{fullDetails.appealCount.$3}}</td>
+                                <td class="col-sm-2">{{fullDetails.appealCount.$2}}</td>
+                                <td class="col-sm-2">{{fullDetails.appealCount.$1}}</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <br/>
+                    <div class="table-responsive perImage">
+                        <table class="table table-bordered table-hover table-striped table-condensed table-center">
+                            <caption>Number of respondents answered per image (Vividness):</caption>
+                            <thead>
+                            <tr>
+                                <th class="col-sm-6">Image</th>
+                                <th class="col-sm-1">Very Good</th>
+                                <th class="col-sm-1">Good</th>
+                                <th class="col-sm-1">Neutral</th>
+                                <th class="col-sm-1">Bad</th>
+                                <th class="col-sm-1">Very Bad</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {{#each groupItem "vividness"}}
+                                <tr>
+                                    <td>
+                                        <a href="{{image.url}}" data-lightbox="{{image.name}}">
+                                            <img src="{{image.url}}" alt="{{image.name}}" class="img-thumbnail thumb center-block"/>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        {{count$5}}
+                                    </td>
+                                    <td>
+                                        {{count$4}}
+                                    </td>
+                                    <td>
+                                        {{count$3}}
+                                    </td>
+                                    <td>
+                                        {{count$2}}
+                                    </td>
+                                    <td>
+                                        {{count$1}}
+                                    </td>
+                                </tr>
+                            {{/each}}
+                            </tbody>
+                        </table>
+                    </div>
+                    <br/>
+
+                    <div class="table-responsive perImage">
+                        <table class="table table-bordered table-hover table-striped table-condensed table-center">
+                            <caption>Number of respondents answered per image (Content Detail):</caption>
+                            <thead>
+                            <tr>
+                                <th class="col-sm-6">Image</th>
+                                <th class="col-sm-1">Very Good</th>
+                                <th class="col-sm-1">Good</th>
+                                <th class="col-sm-1">Neutral</th>
+                                <th class="col-sm-1">Bad</th>
+                                <th class="col-sm-1">Very Bad</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {{#each groupItem "detail"}}
+                                <tr>
+                                    <td>
+                                        <a href="{{image.url}}" data-lightbox="{{image.name}}">
+                                            <img src="{{image.url}}" alt="{{image.name}}" class="img-thumbnail thumb center-block"/>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        {{count$5}}
+                                    </td>
+                                    <td>
+                                        {{count$4}}
+                                    </td>
+                                    <td>
+                                        {{count$3}}
+                                    </td>
+                                    <td>
+                                        {{count$2}}
+                                    </td>
+                                    <td>
+                                        {{count$1}}
+                                    </td>
+                                </tr>
+                            {{/each}}
+                            </tbody>
+                        </table>
+                    </div>
+                    <br/>
+                    <div class="table-responsive perImage">
+                        <table class="table table-bordered table-hover table-striped table-condensed table-center">
+                            <caption>Number of respondents answered per image (Visual Appeal):</caption>
+                            <thead>
+                            <tr>
+                                <th class="col-sm-6">Image</th>
+                                <th class="col-sm-1">Very Good</th>
+                                <th class="col-sm-1">Good</th>
+                                <th class="col-sm-1">Neutral</th>
+                                <th class="col-sm-1">Bad</th>
+                                <th class="col-sm-1">Very Bad</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {{#each groupItem "appeal"}}
+                                <tr>
+                                    <td>
+                                        <a href="{{image.url}}" data-lightbox="{{image.name}}">
+                                            <img src="{{image.url}}" alt="{{image.name}}" class="img-thumbnail thumb center-block"/>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        {{count$5}}
+                                    </td>
+                                    <td>
+                                        {{count$4}}
+                                    </td>
+                                    <td>
+                                        {{count$3}}
+                                    </td>
+                                    <td>
+                                        {{count$2}}
+                                    </td>
+                                    <td>
+                                        {{count$1}}
+                                    </td>
+                                </tr>
+                            {{/each}}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

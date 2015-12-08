@@ -1,0 +1,37 @@
+<template name="itemTable">
+    <h3 class="text-info">Item List: {{surveyItemsCount}}</h3>
+    <br/>
+
+    <div class="table-responsive">
+        <table class="table table-condensed table-bordered table-striped table-center">
+            <thead>
+            <tr>
+                <th class="col-md-5">Item Group</th>
+                <th class="col-md-5">Image</th>
+                <th class="col-md-2">&nbsp;</th>
+            </tr>
+            </thead>
+            <tbody>
+            {{#each surveyItems}}
+                <tr class="survey-items">
+                    <td class="col-md-5 survey-items-text">{{getGroupName}}</td>
+                    <td class="col-md-5">
+                        <a href="{{getImage.url}}" data-lightbox="{{getImage.name}}">
+                            <img src="{{getImage.url}}" alt="{{getImage.name}}" class="img-thumbnail thumb"/>
+                        </a>
+                    </td>
+                    <td class="col-md-2 survey-items-text">
+                        <button class="btn btn-link deleteItem" data-id="{{_id}}"><i class="fa fa-times"></i></button>
+                    </td>
+                </tr>
+            {{/each}}
+            </tbody>
+        </table>
+    </div>
+    <br/>
+    <div class="pull-right">
+    {{> Paginator_UI surveyItems}}
+    </div>
+
+    <br/>
+</template>
