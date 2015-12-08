@@ -1,6 +1,3 @@
-/**
- * Created by NazIsEvil on 25/10/2015.
- */
 Template.surveyWelcome.onCreated(function () {
     Session.set('respondent', undefined);
 });

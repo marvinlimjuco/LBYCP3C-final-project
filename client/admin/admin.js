@@ -1,6 +1,3 @@
-/**
- * Created by NazIsEvil on 24/10/2015.
- */
 itemPaginator = new Paginator(SurveyItems);
 itemGroupsPaginator = new Paginator(SurveyItemGroups);
 
